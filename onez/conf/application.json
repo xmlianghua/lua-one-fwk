@@ -1,0 +1,49 @@
+{
+    "debug": true,
+    
+    "databases": {
+        "tpl": {
+            "host": "localhost",
+            "port": 3306,
+            "database": "",
+            "user": "",
+            "password": "",
+            "timeout": 30000,
+            "max_idle_timeout": 60000,
+            "pool_size": 50,
+            "charset": "utf8",
+            "max_packet_size": 1048576
+        },
+        "db1": {
+            "host": "localhost",
+            "port": 3366,
+            "database": "onez_users",
+            "user": "root",
+            "password": "root",
+            "tables": {
+                "users": "b_user"
+            }
+        },
+        "db2": {
+            "host": "localhost",
+            "port": 3366,
+            "database": "onez_questionbank",
+            "user": "root",
+            "password": "root",
+            "tables":{
+                "tags": "k_tag",
+                "papers": "k_paper"
+            }
+        }
+    },
+
+    "dao": "/usr/local/openresty/nginx/mylua/config/dao.json",
+    "routers": "/usr/local/openresty/nginx/mylua/config/routers.json",
+
+    "locale": "zh",
+    "info_zh": {
+        "nomodule": "<p style='font-size:16px;'>错误: 没有定义功能模块<span style='color:red;'> %s </span></p>",
+        "nomethod": "<p style='font-size:16px;'>错误: 在模块<span style='color:red;'> %s </span>中没有找到方法<span style='color:red;'> %s()</span></p>",
+        "mvcerror": "<p style='font-size: 16px'>错误: <span style='color:red'> %s </span></p>"
+    }
+}
